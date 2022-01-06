@@ -57,9 +57,16 @@ public class Sorts
   //                Returns sorted copy of input ArrayList.
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
   {
-    ArrayList<Comparable> result = (ArrayList<Comparable>) input.clone();
-    bubbleSortV(result);
-    return result;
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
+
+    //copy input ArrayList into working ArrayList
+    for( Comparable o : input )
+      data.add( o );
+
+    //sort working ArrayList
+    bubbleSortV( data );
+
+    return data;
   }
 
 
