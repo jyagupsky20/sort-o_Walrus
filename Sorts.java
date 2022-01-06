@@ -142,8 +142,7 @@ public class Sorts
   // ArrayList-returning insertionSort
   // postcondition: order of input ArrayList's elements unchanged
   //                Returns sorted copy of input ArrayList.
-  public static ArrayList<Comparable>
-    insertionSort( ArrayList<Comparable> input )
+  public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input )
   {
     //declare and initialize empty ArrayList for copying
     ArrayList<Comparable> data = new ArrayList<Comparable>();
