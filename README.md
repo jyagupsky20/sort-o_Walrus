@@ -1,7 +1,7 @@
 # sort-o_Walrus
 **Walrus** (Humans: Daniel Jung, Joshua Yagupsky, Ethan Lam; Ducks: Ralph, Quacker, Carl)
 
-**Song of the Week** [Kathy's Waltz](https://www.youtube.com/watch?v=z8GLQycLjDg)
+**Song of the Week** [Kathy's Waltz, by Dave Brubeck](https://www.youtube.com/watch?v=z8GLQycLjDg)
 
 # bubbleSort
 **Best Case**
