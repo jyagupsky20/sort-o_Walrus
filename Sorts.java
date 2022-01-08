@@ -38,17 +38,24 @@ public class Sorts
   public static void bubbleSortV( ArrayList<Comparable> data )
   {
     Comparable temp;
+    int passes = 0;
+    int comps = 0;
+    int swaps = 0;
+    passes = data.size()-1;
     //The outer loop is for completing n-1 passes
-    for(int p = 0; p < data.size(); p++){
+    for(int p = 0; p < passes; p++){
       //Here we traverse the array, but we speed things up by not having to modify elements we know are sorted.
       for (int i = data.size()-1; i > p; i--) {
+        comps++;
         if(data.get(i).compareTo(data.get(i-1)) < 0){
           //Swap!
           temp = data.remove(i-1);
           data.add(i,temp);
+          swaps++;
         }
       }
     }
+    System.out.println(0 + "," + data.size() + "," + passes + "," + comps + "," + swaps);
   }
 
 
@@ -80,9 +87,14 @@ public class Sorts
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos = 0;
     Comparable temp;
-    for( int pass = data.size() - 1; pass > 0; pass--) {
+    int passes = 0;
+    int comps = 0;
+    int swaps = 0;
+    passes = data.size()-1;
+    for( int pass = passes; pass > 0; pass--) {
       /*System.out.println( "\nbegin pass " + (data.size()-pass) );//diag*/
       for( int i = 0; i <= pass; i++ ) {
+        comps++;
         if (data.get(i).compareTo(data.get(maxPos)) > 0) {
         	maxPos = i;
         }
@@ -94,7 +106,9 @@ public class Sorts
       data.add(pass, temp);
       /*System.out.println( "after swap: " +  data );//diag*/
       maxPos = 0;
+      swaps++;
     }
+    System.out.println(1 + "," + data.size() + "," + passes + "," + comps + "," + swaps);
   }//end selectionSort
 
 
@@ -122,6 +136,10 @@ public class Sorts
   public static void insertionSortV( ArrayList<Comparable> data )
   {
     Comparable temp;
+    int passes = 0;
+    int comps = 0;
+    int swaps = 0;
+    passes = data.size()-1;
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
 
@@ -133,9 +151,11 @@ public class Sorts
 
         // "walk" the current item to where it belongs
         // by swapping adjacent items
+        comps++;
         if (data.get(prev).compareTo(data.get(prev+1)) > 0) {
           temp = data.remove(prev+1);
           data.add(prev,temp);
+          swaps++;
           //System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
 
         }
@@ -143,6 +163,7 @@ public class Sorts
           break;
       }
     }
+    System.out.println(2 + "," + data.size() + "," + passes + "," + comps + "," + swaps);
   }//end insertionSortV
 
 
