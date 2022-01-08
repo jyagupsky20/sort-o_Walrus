@@ -15,9 +15,9 @@ public class Driver {
         Sorts.bubbleSort(mainArr);
         Sorts.selectionSort(mainArr);
         Sorts.insertionSort(mainArr);
-        arrSize += 20;
         //for each successive trial, the array size will increase by 20
       }
+      arrSize += 20;
     }
   }
 }
