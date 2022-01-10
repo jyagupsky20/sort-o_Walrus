@@ -27,7 +27,15 @@ public class Sorts
     }
     return retAL;
   }
-
+public static ArrayList populateReversed(int size){
+	ArrayList<Integer> retAL = new ArrayList<Integer>();
+    while( size > 0 ) {
+      //rand int on interval [lo,hi]
+      retAL.add(size);
+      size--;
+    }
+    return retAL;
+}
   //randomly rearrange elements of an ArrayList
   public static void shuffle( ArrayList al )
   {
