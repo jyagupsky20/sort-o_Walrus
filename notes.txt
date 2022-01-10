@@ -1,0 +1,55 @@
+/***
+ * Walrus (Humans: Daniel Jung, Joshua Yagupsky, Ethan Lam; Ducks: Ralph, Quacker, Carl)
+ * APCS
+ * L04: Never Fear, Big O is Here!
+ ***/
+
+/******************************
+ * DISCO
+ * QCC
+ *
+ * BUB-ALGO:
+ * 1. Traverses through the array from right to left
+ * 2. Compares two adjacent indexes at a time
+ * 3. Swaps the adjacent elements if they are out of order
+ * 4. Repeat until array is sorted
+ * BUB-QA:
+ * q0: If a pass requires no swaps, what do you know?
+ * a0: It's sorted
+ * q1: After pass p, what do you know?
+ * a1: Index p-1 has the correct item
+ * q2: How many passes are necessary to completely sort?
+ * a2: It takes n-1 passes
+ *
+ * SEL-ALGO:
+ * 1. Find the minimum (or maximum) element of the unsorted part of the collection.
+ * 2. Move this element to the beginning (or the end) of the unsorted part of the collection.
+ * 3. This element is now sorted. Repeat until you have a sorted collection.
+ * SEL-QA:
+ * q0: How many passes to sort n elements?
+ * a0: n-1 passes
+ * q1: What do you know after pass p?
+ * a1: p elements are finalized
+ * q2: How do you know if sorted?
+ * a2: If n-1 passes occurred
+ * q3: What does a pass boil down to?
+ * a3: Each pass puts one element in the right spot.
+ *
+ * INS-ALGO:
+ * Walk each item to the right of the partition to its correct location in the sorted part of the array, then increment the partiion and repeat.
+ * INS-QA
+ * q0: How many passes to sort n elements?
+ * a0: n-1 passes
+ * q1: What do you know after pass p?
+ * a1: We know that the element previously at index p is now in the sorted partition
+ * q2: How will you know when sorted?
+ * a2: After n-1 passes
+ * q3: What constitues a pass?
+ * a3: Walking a single element into the sorted partiton
+ * q4: What must you track?
+ * a4: Where the partition is
+ ******************************/
+
+2022-01-06: Compiled together our sorting algorithms into Sorts.java, created Driver file.
+2022-01-07: Modified Sorts.java to output data, modified Driver.java to run randomized trials, collected data in data.csv
+2022-01-09: Analyzed data from random trials. Ran best case trials. Created graphs for both.

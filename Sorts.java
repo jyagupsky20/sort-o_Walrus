@@ -10,8 +10,19 @@ public class Sorts
   public static ArrayList populate( int size, int lo, int hi ) {
     ArrayList<Integer> retAL = new ArrayList<Integer>();
     while( size > 0 ) {
-      //     offset + rand int on interval [lo,hi]
+      //rand int on interval [lo,hi]
       retAL.add( lo + (int)( (hi-lo+1) * Math.random() ) );
+      size--;
+    }
+    return retAL;
+  }
+  public static ArrayList populateSorted(int size, int lo, int hi) {
+    ArrayList<Integer> retAL = new ArrayList<Integer>();
+    retAL.add( lo + (int)( (hi-lo+1) * Math.random() ) );
+    size--;
+    while( size > 0 ) {
+      //previous element + rand int on interval [lo,hi]
+      retAL.add(retAL.get(retAL.size()-1)+ lo + (int)( (hi-lo+1) * Math.random() ) );
       size--;
     }
     return retAL;
