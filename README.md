@@ -22,9 +22,9 @@ The worst case scenario is a list in reverse order.
 
 Reason: The list must swap every bubble. The list must make (size) passes because every pass will only put 1 element in the correct place.
 
-Big-O Classification: Bubble sort is quadratic, or O(n^2). For an array size 100 in the worst case scenario, the last element will be compared and swapped 99 (or size-1) times. The second to last element will be compared and swapped 98 times, and so forth. There will be 99 (or size-1) passes. So the number of comparison and swaps that will need to be made is roughly quadratic.
+Big-O Classification: Bubble sort is quadratic, or O(n^2). For an array size 100 in the worst case scenario, the last element will be compared and swapped 99 (or size-1) times. The second to last element will be compared and swapped 98 times, and so forth. There will be 99 (or size-1) passes. So the number of comparisons and swaps that will need to be made is roughly quadratic.
 
-In the best case, there will be 99 comparisons per pass and no swaps. There will be 99 passes.
+In the best case, the comparisons will be O(n), since it only takes one comparison for bubble sort to confirm that each element is in the correct spot. It will perform no swaps.
 
 # selectionSort
 **Best Case**
@@ -39,7 +39,7 @@ Every case for selection sort will take the same amount of time.
 
 Reason: Regardless of the positioning of the elements in the list, for every pass it compares all of the elements of the list and conducts one swap.
 
-Big-O Classification: Selection sort is quadratic, or O(n^2). For an array size 100, selection sort needs to search through 100 items 100 times, or 100^2 searches.
+Big-O Classification: In terms of searches, selection sort is quadratic, or O(n^2). For an array size 100, selection sort needs to search through 100 items 100 times, or approximately 100^2 searches. However, in terms of swaps, selection sort is linear, or O(n). Each swap done by selection sort is guaranteed to put one element in the correct spot.
 
 The same applies for the best case scenario.
 
@@ -64,4 +64,4 @@ Reason: Every number needs to be walked "as much as possible." For instance, 1 n
 
 Big-O Classification: Selection sort is quadratic, or O(n^2). For an array size 100 in the worst case scenario, the first element will be compared and swapped 1 time. The second element will be compared and swapped 2 times, and so forth, with the final element being compared and swapped 99 (or size-1) times. There will be 99 (or size-1) passes. So the number of comparison and swaps that will need to be made is roughly quadratic.
 
-In the best case, there will be 99 comparisons per pass and no swaps. There will be 99 passes.
+In the best case, the comparisons will be O(n), since it only takes one comparison for insertion sort to confirm that each element is in the correct spot. It will perform no swaps.
