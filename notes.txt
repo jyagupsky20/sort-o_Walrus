@@ -52,5 +52,9 @@
 
 2022-01-06: Compiled together our sorting algorithms into Sorts.java, created Driver file.
 2022-01-07: Modified Sorts.java to output data, modified Driver.java to run randomized trials, collected data in data.csv
-2022-01-09: Analyzed data from random trials. Ran best case trials. Created graphs for average case.
+2022-01-09: Analyzed data from random trials. Ran best case trials.
 2022-01-10: Collected and analyzed data from best and worst cases.
+
+Note: By printing our data to a csv file, we can open it in Google Sheets or a similar program, which can make visualizing data much easier.
+The format for printing was as follows:
+[Sort type (0 bubble, 1 selection, 2 insertion)], [Array size], [passes], [comparisons], [swaps]
